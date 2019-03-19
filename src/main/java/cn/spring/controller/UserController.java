@@ -50,4 +50,13 @@ public class UserController {
 		model.addAttribute("user", userById);
 		return "index";
 	}
+	
+	
+	@RequestMapping(value="/index22")
+	public String index22(@RequestParam("id") String idStr,Model model) {
+		Integer id = Integer.parseInt(idStr);
+		User userById = userService.getUserById(id);
+		model.addAttribute("user", userById);
+		return "index";
+	}
 }
